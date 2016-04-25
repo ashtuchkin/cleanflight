@@ -1,0 +1,20 @@
+
+# Toolchain definition
+set(TOOLCHAIN_PREFIX "/usr/local/bin/arm-none-eabi-")
+
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+set(CMAKE_CROSSCOMPILING 1)
+
+set(CMAKE_C_COMPILER   "${TOOLCHAIN_PREFIX}gcc" CACHE PATH "gcc" FORCE)
+set(CMAKE_CXX_COMPILER "${TOOLCHAIN_PREFIX}g++" CACHE PATH "g++" FORCE)
+set(CMAKE_AR           "${TOOLCHAIN_PREFIX}ar" CACHE PATH "ar" FORCE)
+set(CMAKE_LINKER       "${TOOLCHAIN_PREFIX}ld" CACHE PATH "ld" FORCE)
+set(CMAKE_NM           "${TOOLCHAIN_PREFIX}nm" CACHE PATH "nm" FORCE)
+set(CMAKE_OBJCOPY      "${TOOLCHAIN_PREFIX}objcopy" CACHE PATH "objcopy" FORCE)
+set(CMAKE_OBJDUMP      "${TOOLCHAIN_PREFIX}objdump" CACHE PATH "objdump" FORCE)
+set(CMAKE_STRIP        "${TOOLCHAIN_PREFIX}strip" CACHE PATH "strip" FORCE)
+set(CMAKE_PRINT_SIZE   "${TOOLCHAIN_PREFIX}size" CACHE PATH "size" FORCE)
+set(CMAKE_RANLIB       "${TOOLCHAIN_PREFIX}ranlib" CACHE PATH "ranlib" FORCE)
+
+link_libraries(m c nosys)

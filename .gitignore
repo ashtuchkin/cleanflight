@@ -12,6 +12,8 @@ obj/
 patches/
 startup_stm32f10x_md_gcc.s
 .vagrant/
+.idea/workspace.xml
+.idea/tasks.xml
 
 # script-generated files
 docs/Manual.pdf
