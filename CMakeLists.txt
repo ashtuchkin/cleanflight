@@ -651,7 +651,7 @@ string(REPLACE ";" " " DEBUG_FLAGS_STR "${DEBUG_FLAGS}")
 
 set(CMAKE_ASM_FLAGS "${ARCH_FLAGS_STR} -x assembler-with-cpp -MMD -MP" CACHE STRING "Asm flags" FORCE)
 
-set(LINKER_FLAGS "--gc-sections,-Map,${TARGET_MAP},-L${LINKER_DIR},-verbose" CACHE STRING "Ld flags")
+set(LINKER_FLAGS "--gc-sections,-Map,${TARGET_MAP},-L${LINKER_DIR}" CACHE STRING "Ld flags")
 set(GCC_LINKER_FLAGS "-nostartfiles --specs=nano.specs ${ARCH_FLAGS_STR} ${LTO_FLAGS_STR} ${DEBUG_FLAGS_STR} -static -Wl,${LINKER_FLAGS} -T${LD_SCRIPT}")
 
 set(CMAKE_STATIC_LINKER_FLAGS "${GCC_LINKER_FLAGS}" CACHE STRING "Linker flags" FORCE)
